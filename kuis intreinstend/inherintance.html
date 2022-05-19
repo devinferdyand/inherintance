@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<style>
+    .box{
+        width: 90%;
+        
+    }
+    span{
+        font-family: sans-serif;
+        letter-spacing: 1px;
+    }
+    body{
+     
+    }
+</style>
+<body>
+    <center>
+      <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="about.html">about</a>
+              </li>
+     
+            </ul>
+          </div>
+        </div>
+      </nav>
+<br><br><br>
+    <div class="box">
+        <div class="card text-center">
+            <div class="card-header">
+              <ul class="nav nav-pills card-header-pills">
+                <li class="nav-item">
+                  <a class="nav-link active" href="#">Active</a>
+                </li>
+
+              </ul>
+            </div>
+            <div class="card-body">
+                
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">nama</span>
+                    <input type="text" class="form-control" id="nama" aria-label="Username" aria-describedby="basic-addon1">
+                  </div>
+                  <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">alamat</span>
+                    <input type="text" id="alamat" class="form-control"  aria-label="Username" aria-describedby="basic-addon1">
+                  </div>
+                  <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">umur</span>
+                    <input type="text" id="umur" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+                  </div>
+                  <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">nik</span>
+                    <input type="text" id="nik" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+                  </div>
+<button type="button" onclick="submit()" class="btn btn-primary col-sm-12" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+  submit 
+  </button>
+            </div>
+          </div>
+    </div>
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Data Campus</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="dosen">
+
+                <ul>
+                    <span id="nama."></span>
+                    <span id="alamat."></span>
+                    <span id="umur."></span>
+                    <span id="iddosen."></span>
+                </ul>
+               </div>
+               <div class="dosen">
+                <ul>
+                    <span id="nama.."></span>
+                    <span id="alamat.."></span>
+                    <span id="umur.."></span>
+                    <span id="nik.."></span>
+                </ul>
+               </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Understood</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+<script>
+    function submit(){
+        var nama = document.getElementById("nama").value;
+        var alamat = document.getElementById("alamat").value;
+        var umur = document.getElementById("umur").value;
+        var nik = document.getElementById("nik").value;
+        class Person {
+            constructor (nama,alamat,umur){
+                this.nama = nama;
+                this.alamat = alamat;
+                this.umur = umur;
+
+            }
+            infoperson(){
+                document.write(`nama : ${this. nama}`);
+                document.write(`alamat : ${this. alamat}`);
+                document.write(`umur : ${this. umur}`);
+            }
+        }
+
+         class dosen extends Person{
+             constructor (nama,alamat,umur,iddosen){
+                super(iddosen);
+                this.nama = nama;
+                this.alamat = alamat;
+                this.umur = umur;
+                this.iddosen = iddosen;
+             }
+             infodosen(){
+                document.getElementById("nama.").innerHTML= `nama : ${this. nama}`;
+                document.getElementById("alamat.").innerHTML= `alamat : ${this. alamat}`;
+                document.getElementById("umur.").innerHTML= `umur : ${this. umur}`;
+                document.getElementById("iddosen.").innerHTML= `iddosen : ${this. iddosen}`;
+
+             }
+         }
+
+         
+         class mahasiswa extends Person{
+             constructor (nama,alamat,umur,nik){
+                super(nik);
+                this.nama = nama;
+                this.alamat = alamat;
+                this.umur = umur;
+                this.nik = nik;
+             }
+             infomahasiswa(){
+                document.getElementById("nama..").innerHTML= `nama : ${this. nama}`;
+                document.getElementById("alamat..").innerHTML= `alamat : ${this. alamat}`;
+                document.getElementById("umur..").innerHTML= `umur : ${this. umur}`;
+                document.getElementById("nik..").innerHTML= `nik : ${this. nik}`;
+
+             }
+         }
+     
+
+         var erson = new dosen(nama,alamat,umur,"1933")
+         var maha = new mahasiswa(nama,alamat,umur,nik);
+         maha.infomahasiswa();
+         erson.infodosen();
+        
+
+ 
+    }
+</script>
+</html>
